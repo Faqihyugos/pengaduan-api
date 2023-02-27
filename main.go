@@ -1,13 +1,17 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"log"
+
+	"github.com/faqihyugos/pengaduan-api/server"
+	"github.com/joho/godotenv"
+)
 
 func main() {
-	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
-	r.Run()
+	godotenv.Load()
+
+	err := server.Start()
+	if err != nil {
+		log.Fatal(err)
+	}
 }

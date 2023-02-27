@@ -3,7 +3,7 @@ package repositoryuser
 import (
 	"errors"
 
-	entityuser "github.com/faqihyugos/penaduan-api/entities/entityUser"
+	entityuser "github.com/faqihyugos/pengaduan-api/entities/entityUser"
 	"gorm.io/gorm"
 )
 
